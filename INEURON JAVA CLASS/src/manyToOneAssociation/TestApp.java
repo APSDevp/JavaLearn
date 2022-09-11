@@ -1,6 +1,6 @@
 package manyToOneAssociation;
 
-import inueron.polyAnimalex;
+
 
 public class TestApp {
 	
