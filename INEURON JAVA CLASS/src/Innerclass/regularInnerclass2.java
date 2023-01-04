@@ -1,4 +1,4 @@
-package Innerclass;
+ package Innerclass;
 
 class outer2{ //public,default,final,abstract,strictfp
 	
