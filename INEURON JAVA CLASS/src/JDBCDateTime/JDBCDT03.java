@@ -54,13 +54,12 @@ public class JDBCDT03 {
 					System.out.println("Name is ::"+ userName);
 					System.out.println("Dob is ::"+ date);
 					}
-<<<<<<< HEAD
+
 				} 
-=======
-				} else {
-					System.out.println("no data");
-				}
->>>>>>> branch 'master' of git@github.com:APSDevp/JavaLearn.git
+
+			
+				
+
 			
 		} catch(SQLException se) {
 			
