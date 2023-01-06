@@ -51,7 +51,7 @@ public class CLOBOpsRetrive {
 				       
 				        fos = new FileWriter(file); //placeholder where the image needs to be stored
 				       
-				       /*
+				       /****
 				       byte[] b = new byte[2048];				    
 				     
 				       while(r.read(b) > 0) { //until there is record read it
