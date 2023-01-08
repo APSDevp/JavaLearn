@@ -33,7 +33,7 @@ public class JDBCTransactions02 {
 			    Savepoint sp = connection.setSavepoint();
 			    stmt.executeUpdate("insert into polticians value('rahul','bjp')");   //it is wrong party to test savePoint
 			    //there must some check here to validate and to execute the rollback
-			    System.out.println("Opps something went wrong need to rollback.");
+			    System.out.println("Opps something went wrong need to rollback."); //only the above 3 insert above sp will be inserted in DB
 			    
 			    connection.rollback(sp);
 			    
