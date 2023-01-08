@@ -1,6 +1,10 @@
 package JDBCUtill;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Properties;
 
 public class JDBCConnection {
 	
@@ -8,16 +12,25 @@ public class JDBCConnection {
 		
 	}
 	
-	public static Connection getjdbcConnection() throws SQLException {
+	public static Connection getjdbcConnection() throws SQLException, IOException {
 
 		Connection connection = null;
 		Statement statement = null;
 
-	
-		   String url = "jdbc:mysql://localhost:3306/jdbclearn";
+	    Properties props = new Properties();
+	    
+	  
+	    FileInputStream fis = new  FileInputStream("jdbc.properties"); 
+	    
+	    props.load(fis);
+	    
+		   //String url = "jdbc:mysql://localhost:3306/jdbclearn";
 		   
-		   String username= "root";
-		   String password= "Trend@16";
+		   String url = props.getProperty("url");
+		   String username= props.getProperty("username");
+		   String password= props.getProperty("password");
+		   
+		   
 		   
 		   try {
 				connection = DriverManager.getConnection(url, username, password);
